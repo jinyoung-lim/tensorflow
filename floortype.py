@@ -62,7 +62,7 @@ tf.app.flags.DEFINE_integer(
 )
 
 NUM_CLASSES = 2
-NUM_EXAMPLES_PER_EPOCH_FOR_TRAIN = 250
+NUM_EXAMPLES_PER_EPOCH_FOR_TRAIN = 100
 NUM_EXAMPLES_PER_EPOCH_FOR_EVAL = 10
 
 NUM_EPOCHS_PER_DECAY = 100.0  # Epochs after which learning rate decays.
@@ -171,45 +171,78 @@ def read_markedFrames(filename_queue):
     record.uint8image = tf.transpose(depth_major, [1, 2, 0]) # [d, h, w] to [h, w, d]
     return record
 
+
+
+
 def training_inputs():
     """Construct distorted imput for training"""
     batch_size = FLAGS.batch_size
 
     filename_queue, label_dict = getFilenameQueueAndLabelDict()
     record = read_markedFrames(filename_queue=filename_queue)
+    print(record)
+
     reshaped_image = tf.cast(record.uint8image, tf.float32)
+    # DEBUG
+    print("DEBUG")
+    image_tensor = tf.image.convert_image_dtype(record.uint8image, dtype=tf.uint8)
+    print("sess begin")
+    sess = tf.Session()
+    with sess.as_default():
+        image_numpy = image_tensor.eval(session=sess)
+        print(sess.run(image_numpy))
+    # with sess.as_default():
+    #     image_numpy = image_tensor.eval()
+    #     print("image numpy: ", image_numpy)
+    #     sess.close()
+    sess.close()
+    print("session closed")
+    # cv2.imshow("tf", image_numpy)
+    # cv2.waitKey(10)
 
+    # with tf.name_scope('data_augmentation'):
+    #     h = IMAGE_SIZE
+    #     w = IMAGE_SIZE
+    #
+    #     # Randomly crop a [h, w] section of the image
+    #     distorted_image = tf.random_crop(reshaped_image, [h, w, 3])
+    #
+    #     # Randomly flip the image horizontally
+    #     distorted_image = tf.image.random_flip_left_right(distorted_image)
+    #
+    #     # Randomly change brightness
+    #     distorted_image = tf.image.random_brightness(distorted_image, max_delta=63)
+    #
+    #     # Randomly change contrast
+    #     distorted_image = tf.image.random_contrast(distorted_image, lower=0.2, upper=1.8)
+    #
+    #     # Standardize the image
+    #     float_image = tf.image.per_image_standardization(distorted_image)
+    #
+    #     # Set the shapes of tensors.
+    #     float_image.set_shape([h, w, 3])
+    #     record.label.set_shape([1])
+    #
+    #
+    #     # Ensure that the random shuffling has good mixing properties.
+    #     min_fraction_of_examples_in_queue = 0.4
+    #     min_queue_examples = int(NUM_EXAMPLES_PER_EPOCH_FOR_TRAIN *
+    #                              min_fraction_of_examples_in_queue)
+    #     print ('Filling queue with %d floor images before starting to train. '
+    #            'This will take some time.' % min_queue_examples)
 
-    with tf.name_scope('data_augmentation'):
-        h = IMAGE_SIZE
-        w = IMAGE_SIZE
-
-        # Randomly crop a [h, w] section of the image
-        distorted_image = tf.random_crop(reshaped_image, [h, w, 3])
-
-        # Randomly flip the image horizontally
-        distorted_image = tf.image.random_flip_left_right(distorted_image)
-
-        # Randomly change brightness
-        distorted_image = tf.image.random_brightness(distorted_image, max_delta=63)
-
-        # Randomly change contrast
-        distorted_image = tf.image.random_contrast(distorted_image, lower=0.2, upper=1.8)
-
-        # Standardize the image
-        float_image = tf.image.per_image_standardization(distorted_image)
-
+    with tf.name_scope('data'):
         # Set the shapes of tensors.
-        float_image.set_shape([h, w, 3])
+        reshaped_image.set_shape([480, 640, 3])
         record.label.set_shape([1])
-
 
         # Ensure that the random shuffling has good mixing properties.
         min_fraction_of_examples_in_queue = 0.4
-        min_queue_examples = int(NUM_EXAMPLES_PER_EPOCH_FOR_TRAIN *
-                                 min_fraction_of_examples_in_queue)
-        print ('Filling queue with %d floor images before starting to train. '
-               'This will take some time.' % min_queue_examples)
+        # min_queue_examples = int(NUM_EXAMPLES_PER_EPOCH_FOR_TRAIN *
+        #                          min_fraction_of_examples_in_queue)
+        min_queue_examples = 2
+        print('Filling queue with %d floor images before starting to train. '
+              'This will take some time.' % min_queue_examples)
 
     # # Generate a batch of images and labels by building up a queue of examples.
     # images, labels =  _generate_image_and_label_batch(float_image, record.label,
@@ -218,10 +251,11 @@ def training_inputs():
     # data_dir = os.path.join(FLAGS.data_dir, FLAGS.floorframes_dir)
 
     # Generate a batch of images and labels by building up a queue of examples.
-    images, labels = _generate_image_and_label_batch(float_image, record.label,
+    images, labels = _generate_image_and_label_batch(reshaped_image, record.label,
                                                      min_queue_examples, batch_size,
                                                      shuffle=True)
-
+    print(images)
+    print(labels)
     return images, labels
 
 def _generate_image_and_label_batch(image, label, min_queue_examples, batch_size, shuffle=True):
@@ -502,15 +536,27 @@ def _activation_summary(x):
   )
 
 
+def print_activations(t):
+    """from alexnet_benchmark.py"""
+    print(t.op.name, ' ', t.get_shape().as_list())
+
 
 def main(argv=None):
-    if tf.gfile.Exists(FLAGS.floorframes_dir):
-        tf.gfile.DeleteRecursively(FLAGS.floorframes_dir)
-    tf.gfile.MakeDirs(FLAGS.floorframes_dir)
-    train()
+    # if tf.gfile.Exists(FLAGS.floorframes_dir):
+    #     tf.gfile.DeleteRecursively(FLAGS.floorframes_dir)
+    # tf.gfile.MakeDirs(FLAGS.floorframes_dir)
+
+
+
+
+
+    with tf.Session() as sess:
+        tf.global_variables_initializer().run()
 
 
 
 
 if __name__ == "__main__":
+    tf.logging.set_verbosity(tf.logging.INFO)
+
     tf.app.run()
