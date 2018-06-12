@@ -2,13 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a5abfc18-8bc3-4fa2-899e-52ad272d5a51" name="Default" comment="Attempt to make a floor type classifier... again">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/tensorflow.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/checkpoint" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/events.out.tfevents.1528820165.mscs254-27807" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/events.out.tfevents.1528820498.mscs254-27807" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/events.out.tfevents.1528821285.mscs254-27807" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/events.out.tfevents.1528821350.mscs254-27807" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/events.out.tfevents.1528821463.mscs254-27807" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/events.out.tfevents.1528823337.mscs254-27807" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/events.out.tfevents.1528823478.mscs254-27807" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/events.out.tfevents.1528823548.mscs254-27807" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/events.out.tfevents.1528823796.mscs254-27807" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/events.out.tfevents.1528828054.mscs254-27807" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/events.out.tfevents.1528828074.mscs254-27807" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/events.out.tfevents.1528828141.mscs254-27807" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/events.out.tfevents.1528831788.mscs254-27807" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/events.out.tfevents.1528831865.mscs254-27807" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/floorframes/events.out.tfevents.1528487272.mscs254-27807" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/floorframes/graph.pbtxt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/floortype.py" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/markedFrames/events.out.tfevents.1528487972.mscs254-27807" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/markedFrames/events.out.tfevents.1528488019.mscs254-27807" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/markedFrames/events.out.tfevents.1528488079.mscs254-27807" afterPath="" />
@@ -17,8 +28,25 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/markedFrames/events.out.tfevents.1528488275.mscs254-27807" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/markedFrames/events.out.tfevents.1528488404.mscs254-27807" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/markedFrames/graph.pbtxt" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/floortype.py" afterPath="$PROJECT_DIR$/floortype.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/floortype2.py" afterPath="$PROJECT_DIR$/floortype2.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/model.ckpt-13110.data-00000-of-00001" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/model.ckpt-13110.index" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/model.ckpt-13110.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/model.ckpt-13111.data-00000-of-00001" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/model.ckpt-13111.index" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/model.ckpt-13111.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/model.ckpt-14110.data-00000-of-00001" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/model.ckpt-14110.index" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/model.ckpt-14110.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/model.ckpt-14111.data-00000-of-00001" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/model.ckpt-14111.index" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/model.ckpt-14111.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/model.ckpt-15110.data-00000-of-00001" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/model.ckpt-15110.index" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/model.ckpt-15110.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_data.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/train_data.npy" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/floortype2.py" afterPath="$PROJECT_DIR$/floortype_cnn.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,19 +56,40 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/tensorflow$buildDatabase.coverage" NAME="buildDatabase Coverage Results" MODIFIED="1528843089881" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/tensorflow$floortype2.coverage" NAME="floortype2 Coverage Results" MODIFIED="1528837550186" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/tensorflow$floortype.coverage" NAME="floortype Coverage Results" MODIFIED="1528734227051" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="floortype2.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/floortype2.py">
+      <file leaf-file-name="floortype_cnn.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/floortype_cnn.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="463">
-              <caret line="186" column="27" lean-forward="true" selection-start-line="186" selection-start-column="27" selection-end-line="186" selection-end-column="27" />
+            <state relative-caret-position="-3620">
+              <caret line="19" column="9" lean-forward="false" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="buildDatabase.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/buildDatabase.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="265">
+              <caret line="75" column="43" lean-forward="true" selection-start-line="75" selection-start-column="43" selection-end-line="75" selection-end-column="43" />
               <folding>
-                <element signature="e#2#40#0" expanded="true" />
+                <element signature="e#213#251#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="os.py" pinned="false" current-in-tab="false">
+        <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/os.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="441">
+              <caret line="218" column="15" lean-forward="false" selection-start-line="218" selection-start-column="10" selection-end-line="218" selection-end-column="15" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -50,16 +99,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="319">
               <caret line="1458" column="4" lean-forward="false" selection-start-line="1458" selection-start-column="4" selection-end-line="1458" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="checkpoint" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/checkpoint">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -88,8 +127,8 @@
       <file leaf-file-name="estimator.py" pinned="false" current-in-tab="false">
         <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/tensorflow/python/estimator/estimator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-5304">
-              <caret line="318" column="11" lean-forward="false" selection-start-line="318" selection-start-column="11" selection-end-line="318" selection-end-column="11" />
+            <state relative-caret-position="768">
+              <caret line="119" column="40" lean-forward="false" selection-start-line="119" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -149,6 +188,8 @@
         <option value="$PROJECT_DIR$/floortype.py" />
         <option value="$PROJECT_DIR$/checkpoint" />
         <option value="$PROJECT_DIR$/floortype2.py" />
+        <option value="$PROJECT_DIR$/floortype_cnn.py" />
+        <option value="$PROJECT_DIR$/buildDatabase.py" />
       </list>
     </option>
   </component>
@@ -159,8 +200,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1049" />
-    <option name="y" value="105" />
+    <option name="x" value="534" />
+    <option name="y" value="54" />
     <option name="width" value="1602" />
     <option name="height" value="1305" />
   </component>
@@ -192,6 +233,12 @@
               <item name="tensorflow" type="462c0819:PsiDirectoryNode" />
               <item name="markedFrames" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="tensorflow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tensorflow" type="462c0819:PsiDirectoryNode" />
+              <item name="markedFrames" type="462c0819:PsiDirectoryNode" />
+              <item name="allfloorframes" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -215,7 +262,25 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.floortype2">
+  <component name="RunManager" selected="Python.buildDatabase">
+    <configuration name="buildDatabase" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="tensorflow" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/buildDatabase.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
     <configuration name="floortype" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -234,7 +299,7 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="floortype2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="floortype_cnn" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -247,19 +312,21 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="tensorflow" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/floortype2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/floortype_cnn.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <list size="2">
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Python.floortype" />
-      <item index="1" class="java.lang.String" itemvalue="Python.floortype2" />
+      <item index="1" class="java.lang.String" itemvalue="Python.floortype_cnn" />
+      <item index="2" class="java.lang.String" itemvalue="Python.buildDatabase" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Python.floortype2" />
-        <item index="1" class="java.lang.String" itemvalue="Python.floortype" />
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="Python.buildDatabase" />
+        <item index="1" class="java.lang.String" itemvalue="Python.floortype_cnn" />
+        <item index="2" class="java.lang.String" itemvalue="Python.floortype" />
       </list>
     </recent_temporary>
   </component>
@@ -292,7 +359,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1049" y="105" width="1602" height="1305" extended-state="0" />
+    <frame x="534" y="54" width="1602" height="1305" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15106118" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -304,7 +371,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3998378" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -334,13 +401,11 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/floortype2.py">
+    <entry file="file://$PROJECT_DIR$/floortype_cnn.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#2#40#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -380,19 +445,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1170">
           <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="91" selection-end-column="22" />
-          <folding>
-            <element signature="e#377#415#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/floortype2.py">
+    <entry file="file://$PROJECT_DIR$/floortype_cnn.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1815">
           <caret line="121" column="18" lean-forward="false" selection-start-line="121" selection-start-column="18" selection-end-line="121" selection-end-column="18" />
-          <folding>
-            <element signature="e#2#40#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -551,24 +612,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/floortype.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-73">
-          <caret line="47" column="1" lean-forward="true" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="1" />
-          <folding>
-            <element signature="e#377#415#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/tensorflow/python/estimator/estimator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5304">
-          <caret line="318" column="11" lean-forward="false" selection-start-line="318" selection-start-column="11" selection-end-line="318" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/tensorflow/python/estimator/model_fn.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="644">
@@ -601,12 +644,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/floortype2.py">
+    <entry file="file://$PROJECT_DIR$/floortype.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="186" column="27" lean-forward="true" selection-start-line="186" selection-start-column="27" selection-end-line="186" selection-end-column="27" />
+        <state relative-caret-position="-900">
+          <caret line="47" column="1" lean-forward="true" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/tensorflow/python/estimator/estimator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="768">
+          <caret line="119" column="40" lean-forward="false" selection-start-line="119" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/floortype_cnn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3620">
+          <caret line="19" column="9" lean-forward="false" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/os.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="218" column="15" lean-forward="false" selection-start-line="218" selection-start-column="10" selection-end-line="218" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buildDatabase.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="75" column="43" lean-forward="true" selection-start-line="75" selection-start-column="43" selection-end-line="75" selection-end-column="43" />
           <folding>
-            <element signature="e#2#40#0" expanded="true" />
+            <element signature="e#213#251#0" expanded="true" />
           </folding>
         </state>
       </provider>
